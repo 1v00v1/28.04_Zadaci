@@ -67,7 +67,7 @@ public class Main {
             String drzava = s.nextLine().trim();
 
 
-            String query = String.format("DELETE FROM Drzava WHERE Naziv = '%s'",drzava);
+            String query = String.format("DELETE FROM Drzava WHERE Naziv = '%s' AND IdDrzava >3",drzava);
             st.executeUpdate(query);
             st.close();
         } catch (SQLException e) {

@@ -61,7 +61,7 @@ public class Main {
         try (Connection connection = ds.getConnection()) {
 
             Statement s = connection.createStatement();
-            System.out.println("Popis Drđava: ");
+            System.out.println("Popis Država: ");
             ResultSet rs = s.executeQuery("SELECT Naziv FROM Drzava ORDER BY Naziv");
             while (rs.next()) {
                 System.out.printf("%s, ", rs.getString("Naziv"));

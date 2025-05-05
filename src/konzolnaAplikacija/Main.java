@@ -35,16 +35,24 @@ public class Main {
         do {
             printOptions();
             System.out.print("Vaš izbor: ");
-            switch (Integer.parseInt(s.nextLine().trim())) {
-                case 1 -> unosDržave(s, ds,države);
-                case 2 -> izmjenaDržave(s, ds);
-                case 3 -> brisanjeDržave(s, ds);
-                case 4 -> ispisDržava(ds);
-                default -> izlaz = true;
+            try {
+
+
+                switch (Integer.parseInt(s.nextLine().trim())) {
+
+                    case 1 -> unosDržave(s, ds, države);
+                    case 2 -> izmjenaDržave(s, ds);
+                    case 3 -> brisanjeDržave(s, ds);
+                    case 4 -> ispisDržava(ds);
+                    case 5 -> izlaz = true;
+
+                }
+
+            } catch (NumberFormatException e) {
+                System.out.println("Krivi unos. Pokušajte ponovo");
             }
-
-
         } while (!izlaz);
+
 
     }
 

@@ -26,6 +26,7 @@ import java.util.Scanner;
 
 import static konzolnaAplikacija.DatabaseConnection.createDataSource;
 
+
 public class Main {
     public static void main(String[] args) {
         Boolean izlaz = false;

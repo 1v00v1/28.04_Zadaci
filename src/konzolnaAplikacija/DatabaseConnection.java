@@ -3,9 +3,11 @@ package konzolnaAplikacija;
 
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
+import javax.sql.DataSource;
+
 public class DatabaseConnection {
 
-    static javax.sql.DataSource createDataSource() {
+    public static DataSource createDataSource() {
 
         SQLServerDataSource ds = new SQLServerDataSource();
         ds.setServerName("localhost");
